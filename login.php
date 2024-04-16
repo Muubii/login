@@ -9,8 +9,8 @@ $conn = new mysqli($servername, $username, $password, $database);
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
-    $myusername = mysqli_real_escape_string($conn, $_POST['username']);
-    $mypassword = mysqli_real_escape_string($conn, $_POST['password']);
+    $myusername = ( $_POST['username']);
+    $mypassword = ( $_POST['password']);
     
     $query = "SELECT username FROM inloggegevens WHERE username = '$myusername' and password = '$mypassword'";
     
